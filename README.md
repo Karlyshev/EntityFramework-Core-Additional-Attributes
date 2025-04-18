@@ -12,10 +12,10 @@ Those attributes that are marked as SummaryAsComment will have comment from summ
 The attribute that is marked as WithDefaultValue will have the default value as set for the class property.
 
 ### TestEntity1
-This entity configure shows the using attribute such as ForeignKeyFor for one-to-many relation.
+This entity configure shows the using of attribute such as ForeignKeyFor for one-to-many relation.
 
 ### TestEntity2
-This entity configure shows the using attribute such as ForeignKeyFor for one-to-one relation.
+This entity configure shows the using of attribute such as ForeignKeyFor for one-to-one relation.
 
 ### TestEntity3
-This entity configure shows the using attribute such as ForeignKeyFor for one-to-many relation with composite key.
+This entity configure shows the using of attribute such as ForeignKeyFor for one-to-many relation with composite key.
