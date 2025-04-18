@@ -5,7 +5,7 @@ This repository is done additional attributes which missing in the Entity Framew
 I tried to describe some examples of using attributes in the App.Entities project:
 
 ### MainEntity
-This entity configure shows the using attributes such as SummaryAsComment and WithDefaultValue.
+This entity configure shows the using of attributes such as SummaryAsComment and WithDefaultValue.
 
 Those attributes that are marked as SummaryAsComment will have comment from summary.
 
