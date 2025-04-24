@@ -1,4 +1,4 @@
-﻿namespace App.Common;
+﻿namespace App.Domain;
 
 /// <summary>
 /// RU: Базовая сущность

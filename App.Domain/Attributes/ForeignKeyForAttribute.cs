@@ -1,4 +1,4 @@
-﻿namespace App.Attributes;
+﻿namespace App.Domain.Attributes;
 
 /// <summary>
 /// RU: 

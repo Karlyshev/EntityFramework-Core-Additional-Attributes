@@ -1,25 +1,25 @@
-﻿using App.Attributes;
-using App.Common;
+﻿using App.Domain.Attributes;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace App.Entities;
+namespace App.Domain.Entities;
 
 /// <summary>
 /// Test 1
 /// </summary>
-[Table("tests_1"), SummaryAsComment]
-public class TestEntity1: IEntity
+[Table("tests_1"), WithComment]
+public class TestEntity1: BaseEntityWithDescription, IEntity
 {
     /// <summary>
     /// Identifier
     /// </summary>
-    [Column("id", Order = 0), SummaryAsComment]
+    [Key, Column("id"), WithComment]
     public int Id { get; set; }
 
     /// <summary>
     /// Foreign key for Main entity
     /// </summary>
-    [Column("main_id", Order = 1), SummaryAsComment,
+    [Column("main_id"), WithComment,
      ForeignKeyFor(ForeignKeyNavigationProperty = nameof(MainEntity), RelatedNavigationProperty = nameof(MainEntity.TestEntities1), RelatedKey = nameof(MainEntity.Id))]
     public int MainId { get; set; }
 

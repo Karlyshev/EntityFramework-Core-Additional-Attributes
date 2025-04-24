@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-using App.Infrastructure;
+﻿using App.Infrastructure;
+using App.Infrastructure.Extensions;
 
-var db = new DatabaseContext("Host=localhost;Port=5432;Username=<your_uesername>;Password=<your_password>;Database=AppTestAttr");
+var db = new DatabaseContext("Host=localhost;Port=5432;Username=<your db username>;Password=<your db password>;Database=AppTestAttr");
+MetadataExtensions.GenerateMetadata(db);

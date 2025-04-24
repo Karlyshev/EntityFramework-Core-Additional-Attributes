@@ -1,5 +1,5 @@
-﻿using App.Attributes;
-using App.Common;
+﻿using App.Domain;
+using App.Domain.Attributes;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace App.Infrastructure.Helpers;
