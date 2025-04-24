@@ -29,7 +29,7 @@ This entity configure shows the using of attribute such as ForeignKeyFor for one
 This entity configure shows the using of attribute such as ForeignKeyFor for one-to-many relation with composite key.
 
 ## How to use this (EN):
-Copy the files from App.Domain and App.Infrastructure to your project (or similar projects, i.e. App.Domain to <smth >.Domain and App.Infrastructure to <smth >.Infrastructure, if a clean architecture is used).
+Copy the files from App.Domain and App.Infrastructure to your project (or similar projects, i.e. App.Domain to &lt;smth&gt;.Domain and App.Infrastructure to <smth >.Infrastructure, if a clean architecture is used).
 
 Inherit the ExtendedDbContext for your DbContext, because it is this DbContext that configures the database model with the all additions to EntityFrameworkCore.
 
