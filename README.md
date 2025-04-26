@@ -1,4 +1,4 @@
-# EntityFramework-Core-Additional-Attributes (EN)
+# EntityFramework-Core-Missing-Attributes (EN)
 This repository implements additional attributes that are missing from the Entity Framework Core.
 
 This solution consists of 3 projects:
@@ -26,12 +26,12 @@ At the same time, it is necessary to understand that an XML documentation file f
 ### TestEntity3
 - This entity configure shows the using of attribute such as ForeignKeyFor for one-to-many relation with composite key.
 
-## How to use this (EN):
+## How to use this:
 - Copy the files from App.Domain and App.Infrastructure to your project (or similar projects, i.e. App.Domain to &lt;smth&gt;.Domain and App.Infrastructure to &lt;smth&gt;.Infrastructure, if a clean architecture is used).
 - Inherit the ExtendedDbContext for your DbContext, because it is this DbContext that configures the database model with the all additions to EntityFrameworkCore.
 
 
-# EntityFramework-Core-Additional-Attributes (RU)
+# EntityFramework-Core-Missing-Attributes (RU)
 Этот репозитории реализует дополнительные атрибуты, отсутствующие в EntityFrameworkCore. 
 
 Это рещение состоит из 3х проектов:
@@ -59,6 +59,6 @@ At the same time, it is necessary to understand that an XML documentation file f
 ### TestEntity3
 - Эта настройка сущности показывает применение атрибута, такого как ForeignKeyFor для отношения "Один-ко-многим" с составным ключом.
 
-## Как этим пользоваться (RU):
+## Как этим пользоваться:
 - Скопировать файлы из App.Domain и App.Infrastructure в свой проект (или схожие проекты, т.е. App.Domain в &lt;что-то там&gt;.Domain and App.Infrastructure to &lt;что-то там&gt;.Infrastructure, если применяется чистая архитектура).
 - Унаследуйте ExtendedDbContext для своего DbContext, потому что именно этот DbContext настраивает модель БД со всеми дополнениями для EntityFrameworkCore.
