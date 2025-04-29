@@ -14,7 +14,7 @@ public class MainEntity: BaseEntityWithDescription
     /// <summary>
     /// Identifier
     /// </summary>
-    [Key, Column("id"), WithComment]
+    [Key, WithComment]
     public int Id { get; set; }
 
     /// <summary>

@@ -3,7 +3,9 @@ using App.Domain.Attributes;
 using App.Infrastructure.Extensions;
 using App.Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
+using System.Text;
 
 namespace App.Infrastructure;
 
@@ -117,11 +119,43 @@ public abstract class ExtendedDbContext: DbContext
             for (var i = 0; i < properties.Length; i++)
             {
                 var property = properties[i];
+
+                var columnAttr = property.GetCustomAttribute<ColumnAttribute>(true);
+                if (columnAttr is null)
+                {
+                    builder.Property(property.Name).HasColumnName(ConvertToSnakeCase(property.Name));
+                }
+
                 builder.ApplyForeignKeyAttribute(property.GetCustomAttributeWithInterfaces<ForeignKeyForAttribute>(), property.Name);
                 builder.ApplySummaryAsCommentAttribute(property.GetCustomAttributeWithInterfaces<WithCommentAttribute>(), xmlDocs, property);
                 builder.AppleWithDefaultValueAttribute(property.GetCustomAttributeWithInterfaces<WithDefaultValueAttribute>(), ref entityInstance, property);
                 builder.Property(property.Name).HasColumnOrder(i);
             }
         }
+    }
+
+    private static string ConvertToSnakeCase(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return input;
+
+        var builder = new StringBuilder();
+        builder.Append(char.ToLower(input[0]));
+
+        for (int i = 1; i < input.Length; i++)
+        {
+            char currentChar = input[i];
+            if (char.IsUpper(currentChar))
+            {
+                builder.Append('_');
+                builder.Append(char.ToLower(currentChar));
+            }
+            else
+            {
+                builder.Append(currentChar);
+            }
+        }
+
+        return builder.ToString();
     }
 }

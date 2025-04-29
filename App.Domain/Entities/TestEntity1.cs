@@ -13,13 +13,13 @@ public class TestEntity1: BaseEntityWithDescription, IEntity
     /// <summary>
     /// Identifier
     /// </summary>
-    [Key, Column("id"), WithComment]
+    [Key, WithComment]
     public int Id { get; set; }
 
     /// <summary>
     /// Foreign key for Main entity
     /// </summary>
-    [Column("main_id"), WithComment,
+    [WithComment,
      ForeignKeyFor(ForeignKeyNavigationProperty = nameof(MainEntity), RelatedNavigationProperty = nameof(MainEntity.TestEntities1), RelatedKey = nameof(MainEntity.Id))]
     public int MainId { get; set; }
 

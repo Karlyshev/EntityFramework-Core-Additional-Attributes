@@ -13,14 +13,14 @@ public class TestEntity2: BaseEntityWithDescription, IEntity
     /// <summary>
     /// Foreign key for Test entity 1
     /// </summary>
-    [Column("test_id_1"), WithComment,
+    [WithComment,
      ForeignKeyFor(ToMany = false, ForeignKeyNavigationProperty = nameof(TestEntity1), RelatedNavigationProperty = nameof(TestEntity1.TestEntity2), RelatedKey = nameof(TestEntity1.Id), RelatedType = nameof(Entities.TestEntity1))]
     public int TestId1 { get; set; }
 
     /// <summary>
     /// Number
     /// </summary>
-    [Column("number"), WithComment, WithDefaultValue]
+    [WithComment, WithDefaultValue]
     public int Number { get; set; } = 1;
 
     /// <summary>

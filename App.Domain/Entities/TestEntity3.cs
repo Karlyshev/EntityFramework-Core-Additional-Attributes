@@ -15,19 +15,19 @@ public class TestEntity3: BaseEntityWithDescription, IEntity
     /// <summary>
     /// Identifier
     /// </summary>
-    [Key, Column("id"), WithComment]
+    [Key, WithComment]
     public int Id { get; set; }
 
     /// <summary>
     /// Foreign key for Test entity 2 (1/2)
     /// </summary>
-    [Column("test_id_1"), WithComment]
+    [WithComment]
     public int? TestId1 { get; set; }
 
     /// <summary>
     /// Foreign key for Test entity 2 (2/2)
     /// </summary>
-    [Column("test_number"), WithComment]
+    [WithComment]
     public int? TestNumber { get; set; }
 
     /// <summary>
